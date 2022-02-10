@@ -1,0 +1,120 @@
+body{
+   background-color:  #fff;
+
+	display:  flex;
+	justify-content:  center;
+	align-items:  center;
+
+	
+	}
+.container{
+	width:  500px; 
+	box-shadow:  0 5px 10px rgba(0,0,0,0.2);
+}
+
+.form-group{
+	width:  300px;
+	margin: 20px 0 40px;
+
+	position: relative;
+}
+
+.form-group label{
+	position:  absolute;
+	top:  30px;
+	left:  0;
+}
+
+.form-group label span{
+	display:  inline-block;
+	transition:  all 0.3s ease;
+}
+.form-group input:valid + label span,
+.form-group input:focus + label span{
+	color:  blue;
+	transform:  translateY(-20px);
+}
+.form-group input{
+	display:  block;
+	width:  100%;
+	background-color:  transparent;
+	border:  0;
+	border-bottom:  2px solid #fff;
+	font-size:  2rem;
+	color: blue;
+	padding: 15px 0;
+}
+
+.form-group input:focus{
+	outline:  none;
+	border-bottom-color:  #4287f5;
+}
+
+.btn{
+	width:  100%;
+	background-color:  #4287f5;
+	  font-family:  inherit;
+    font-size:  16px;
+    padding:  15px;
+    border: 0;
+    border-radius:  5px;
+    cursor:  pointer;
+}
+
+.code-container{
+	display:  flex;
+	justify-content: center;
+	align-items:  center;
+	margin:  40px 0;
+}
+
+.code{
+	width:  50px;
+	height: 70px;
+	font-size:  30px;
+	text-align:  center;
+	border:  1px solid #eee;
+	border-radius:  5px;
+	margin:  1%;
+	
+}
+
+.code::-webkit-inner-spin-button,
+.code::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.code:valid{
+	border-color:  skyblue;
+	box-shadow:  5px 5px 10px rgba(0,0,0,0.3);
+}
+
+.div{
+	margin:  20px 0;
+
+	position: relative;
+}
+
+.div i,.div small{
+	font-size:  20px;
+}
+
+.likes i,.loves i{
+	display: block;
+	font-size:  50px;
+	margin: 30px 0;
+}
+
+.likes i,.loves i{
+	color:  yellow;
+   animation:  myani 0.5s;
+   opacity:  1;
+}
+
+@keyframes myani{
+	to{
+		color: blue;
+		}
+}
+

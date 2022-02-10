@@ -1,0 +1,37 @@
+*{
+    box-sizing:border-box;
+}
+
+body{
+    font-family:sans-serif;
+    min-height: 100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+
+    margin:0;
+
+}
+
+.container{
+    max-width:1000px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    /*screen sizeနဲ့ ဆန့်ရင် ဘေးတိုက်ပေါ်, မဆံ့ရင် အောက်ဆင်း*/
+    flex-wrap:wrap;
+
+}
+
+.container img{
+    width:300px;
+    height:300px;
+
+    /*imgကို ပေးထားတဲ့ widthကွက်တိ ပေါ်ချင်လို့*/
+    object-fit:cover;
+    margin:10px;
+}
+

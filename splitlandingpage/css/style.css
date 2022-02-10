@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
+
+:root{
+    --leftbg-color: linear-gradient(45deg,rgba(161,83,127,0.1),rgba(168,46,127,0.1));
+    --rightbg-color: linear-gradient(45deg,rgba(229,243,127,0.1),rgba(240,193,127,0.1));
+   
+    --leftbtn-hovercolor:  #0465db;
+    --rightbtn-hovercolor: #9bd604;
+
+    --hover-width: 75%;
+    --other-width: 25%;
+
+}
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Mulish', sans-serif;
+    height: 100vh;
+
+    margin: 0;
+    overflow: hidden;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+}
+
+.split{
+    width: 50%;
+    height: 100%;
+
+    position: absolute;
+
+    overflow: hidden;
+}
+
+.split.left{
+    left: 0;
+    background-image: url('../img/1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.split.left::before{
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: var(--leftbg-color);
+
+      position: absolute;
+}
+
+.split.right{
+    right: 0;
+    background-image: url('../img/5.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.split.right::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: var(--rightbg-color);
+
+    position: absolute;
+}
+
+.split.left,.split.right,.split-left::before,.split.right::before{
+    transition: all 1000ms ease-in-out;
+}
+
+h1{
+     /* 1rem = 16px; */
+    font-size: 4rem;
+    color: #fff;
+
+    text-shadow:  10px 5px 10px rgba(0,0,0,0.7);
+
+    white-space: nowrap;
+    
+    position: absolute;
+    top: 20%;
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+.btn{
+    width: 15rem;
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 0.2rem solid #fff;
+    padding: 1.5rem;
+    
+
+    position: absolute;
+    top:  45%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.split.left .btn:hover{
+     background-color: var(--leftbtn-hovercolor);
+     border-color: var(--leftbtn-hovercolor);
+
+     transition:  0.3s;
+}
+
+.split.right .btn:hover{
+    background-color: var(--rightbtn-hovercolor);
+    border-color: var(--rightbtn-hovercolor);
+
+    transition: 0.3s;
+}
+
+.hover-left .left{
+    width: var(--hover-width);
+}
+
+.hover-left .right{
+    width: var(--other-width);
+}
+
+.hover-right .left{
+    width: var(--other-width);
+}
+
+.hover-right .right{
+    width: var(--hover-width);
+}
+
+@media(max-width:800px){
+    h1{
+        font-size: 2rem;
+        top: 30px;
+    }
+
+    .btn{
+        width: 12rem;
+        padding: 1.2rem;
+    }
+}

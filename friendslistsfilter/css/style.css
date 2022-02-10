@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Mulish', sans-serif;
+    background-color:  #f4f4f4;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+}
+
+.container{
+    width: 400px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    
+    overflow: hidden;
+}
+
+.header{
+    background: linear-gradient(
+      20deg,
+     #0390fc,
+     #fc2403
+    );
+    color: #fff;
+    padding: 30px 20px;
+}
+
+.title{
+    margin: 0px;
+}
+
+.subtitle{
+    display: block;
+    margin:0 0 20px;
+    opacity: 0.8; 
+}
+
+ .header .search{
+    width: 100%;
+    background-color: rgba(0,0,0,0.3);
+    border: 0;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 15px;
+    padding: 10px 15px;
+}
+
+.header .search:focus{
+    outline: none;
+}
+
+.user-list{
+    list-style: none;
+    background-color: #fff;
+
+    max-height: 400px;
+
+    margin: 0;
+    padding: 0;
+
+    overflow-y: auto;
+}
+
+.user-list li{
+    display: flex;
+    padding: 20px;
+}
+
+.user-list img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-list .user-info{
+    margin-left: 10px;
+}
+
+.user-info h4{
+    margin: 0 0 10px;
+}
+
+.user-info p{
+    font-size: 12px;
+}
+
+.user-list li:not(:last-of-type){
+    border-bottom: 1px solid #eee;
+}
+
+.user-list li.hide{
+    display: none;
+}
